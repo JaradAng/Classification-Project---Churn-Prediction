@@ -17,7 +17,7 @@ warnings.filterwarnings("ignore")
 
 def prep_telco_data(df):
 
-    # Drop duplicate columns
+    # Drop duplicate columns adn ones I don't need/want
     df = df.drop(columns=['payment_type_id', 'internet_service_type_id', 'contract_type_id', 'customer_id', 'Unnamed: 0', 'gender'])
        
     # Drop null values stored as whitespace    
@@ -150,7 +150,7 @@ def telco_rec(df):
 
 def predict_telco_data(df):
 
-    # Drop duplicate co
+    # Drop duplicate columns but keeping customer id so that I can make the deliverable
     df = df.drop(columns=['payment_type_id', 'internet_service_type_id', 'contract_type_id', 'Unnamed: 0', 'gender', 'senior_citizen'])
        
     # Drop null values stored as whitespace    
